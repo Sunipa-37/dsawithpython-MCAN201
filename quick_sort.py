@@ -24,9 +24,9 @@ def quick(a,l,r):
             left+=1
         if right<left:
             return p
-a=[0,17,-3,90,-14,0,1,100]
+a=[53,10,15,6,100,-1,22,2,18,27]
 print(a)
 l=0
-r=7
-quick_Sort(a,l,r)
+r=len(a)
+quick_Sort(a,l,r-1)
 print(a)

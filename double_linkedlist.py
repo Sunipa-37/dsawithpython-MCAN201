@@ -22,7 +22,7 @@ class doublelinkedlist:
         nd=node(item)
         if self.start==None:
             self.start=nd
-            print(f"{item} inserted at first")
+            print(f"{item} inserted first ele")
             return
         self.start.prev=nd
         nd.next=self.start
@@ -41,7 +41,7 @@ class doublelinkedlist:
         nd.prev=temp
         if temp.next is not None:
             temp.next.prev=nd
-            temp.next=nd
+        temp.next=nd
     def insert_after_spec_item(self,item,sitem):
         nd=node(item)
         if self.start==None:
@@ -126,23 +126,25 @@ class doublelinkedlist:
     def display(self):
         temp=self.start
         while(temp.next!=None):
-            print(temp.item,end="-> ")
+            print(temp.item,end="<-> ")
             temp=temp.next
         print(temp.item)
 d1=doublelinkedlist()
-d1.insert_at_last("b")
-d1.insert_at_last("d")
+# d1.insert_at_last("b")
+# d1.insert_at_last("d")
 d1.insert_at_beg("a")
-d1.insert_after_spec_pos("c",2)
-d1.insert_after_spec_item("e","d")
+d1.insert_at_beg(10)
 d1.display()
-d1.delete_from_beg()
-d1.display()
-d1.delete_at_last()
-d1.display()
-d1.delete_spec_pos(2)
-d1.display()
-d1.delete_spec_item("2")
-d1.display()
-d1.delete_spec_item("d")
-d1.display()
+# d1.insert_after_spec_pos("c",2)
+# d1.insert_after_spec_item("e","d")
+# d1.display()
+# d1.delete_from_beg()
+# d1.display()
+# d1.delete_at_last()
+# d1.display()
+# d1.delete_spec_pos(2)
+# d1.display()
+# d1.delete_spec_item("2")
+# d1.display()
+# d1.delete_spec_item("d")
+# d1.display()
